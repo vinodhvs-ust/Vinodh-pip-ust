@@ -6,7 +6,7 @@ spec:
   provider: vault
   parameters:
     roleName: 'csi-kv'
-    vaultAddress: 'http://vault:8200'
+    vaultAddress: 'http://a87445851ea7945c89b904d618614b30-663964140.eu-west-1.elb.amazonaws.com:8200'
     objects: |
       - objectName: "user"
         secretPath: "kv/app"
@@ -21,7 +21,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: csi-sa
-  namespace: default
+  namespace: app
 
 ---
 apiVersion: apps/v1
